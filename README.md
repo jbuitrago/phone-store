@@ -84,5 +84,23 @@ https://medium.com/@khriztianmoreno/configuraci%C3%B3n-de-eslint-usando-la-gu%C3
 
 https://prettier.io/docs/en/install.html
 
-## Config directories
+## Project Structure
+
+```sh
+├── src                         # Source code.
+    ├── components              # reusable UI components
+    ├── containers              # Page components/pages
+    ├── redux                   # Redux store
+        ├── actions             # All actions create here
+        ├── constants           # Redux constants 
+        ├── reducers            # reducers to manage app's state
+        ├── store               # redux store configured
+    ├── sagas                   # App API calls/ asynchronous operations handle here
+        ├── api.js              # Axios baseUrl configured here
+        ├── index.js            # rootSaga
+        ├── sampleSaga.js       # Sample/demo saga file
+    ├── utils                   # conatins all utility files
+        ├── routes.js           # Application routes handle here
+├── index.js                    # React-redux and saga configured here
+```
 
