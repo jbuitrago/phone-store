@@ -1,8 +1,9 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
+    "env": { 
+        "es6": true, 
+        "node": true, 
+        "mocha": true 
+      }, 
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended"
@@ -17,6 +18,7 @@
         "react"
     ],
     "rules": {
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "on",
+        "react/prop-types": "off"
     }
 }
