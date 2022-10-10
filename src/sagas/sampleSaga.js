@@ -3,7 +3,6 @@ import API from "./api";
 import {GET_PRODUCTS_LIST, GET_PRODUCT_DETAIL} from "../redux/constants/counterConstant"
 import { getProductsListSuccess,getProductDetailSuccess } from "../redux/actions/counterAction";
 
-
 const getProductsList = async () => {
   return await API.get("/product")
   .catch((err) => {
@@ -11,8 +10,11 @@ const getProductsList = async () => {
   });
 }
 
-
 const getProductDetail = async (id) => {
+  console.log("***")
+  console.log( id);
+  
+ // const productId = "meQvyTcXACAwWn3wCKSw6";
   return await API.get(`/product/${id}`)
   .catch((err) => {
     console.log(err);
@@ -26,6 +28,7 @@ function* getProductsListSaga(action){
     if (status === 200) {
       yield put(getProductsListSuccess(data));
     } else {
+      //TODO:put(getProductListFailed)
       console.log("Error on getProductsListSaga")
     }
   } catch (error) {
