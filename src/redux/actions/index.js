@@ -1,5 +1,5 @@
-import * as countActions from "./counterAction"
+import * as productActions from "./productAction"
 
 export {
-  countActions
+  productActions
 }

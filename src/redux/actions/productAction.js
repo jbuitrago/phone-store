@@ -3,8 +3,10 @@ import {
     GET_PRODUCTS_LIST_SUCCESS,
     GET_PRODUCT_DETAIL,
     GET_PRODUCT_DETAIL_SUCCESS,
+    POST_PRODUCT_CART,
+    POST_PRODUCT_CART_SUCCESS,
     SET_PRODUCT_ID,
-} from '../constants/counterConstant'
+} from '../constants/productConstant'
 
 export const getProductsList = () => {
     return {
@@ -38,6 +40,20 @@ export const getProductDetail = (id) => {
 export const getProductDetailSuccess = (data) => {
     return {
         type: GET_PRODUCT_DETAIL_SUCCESS,
+        payload: data,
+    }
+}
+
+export const postProductCart = (data) => {
+    return {
+        type: POST_PRODUCT_CART,
+        payload: data,
+    }
+}
+
+export const postProductCartSuccess = (data) => {
+    return {
+        type: POST_PRODUCT_CART_SUCCESS,
         payload: data,
     }
 }
