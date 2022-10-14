@@ -17,7 +17,12 @@ const Product = ({ data }) => {
         <Grid item key={id} xs={12} sm={6} md={3}>
             <Card>
                 <CardActionArea>
-                    <CardMedia component="img" image={imgUrl} alt={model} />
+                    <CardMedia
+                        component="img"
+                        image={imgUrl}
+                        alt={model}
+                        height="50%"
+                    />
                     <CardContent>
                         <Typography gutterBottom component="div">
                             {model}
@@ -31,16 +36,15 @@ const Product = ({ data }) => {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button
-                        component={Link}
-                        to={`${ROUTES.PRODUCT_DETAIL}/${id}`}
-                    >
-                        VER MAS
-                    </Button>
+                    <Link to={`${ROUTES.PRODUCT_DETAIL}/${id}`}>
+                        <Button size="small" color="primary">
+                            info
+                        </Button>
+                    </Link>
                 </CardActions>
             </Card>
         </Grid>
-    )
+   )
 }
 
 export default Product

@@ -24,7 +24,6 @@ const Home = () => {
               {productList.length > 0 && productList?.map((product) => {
                   return (
                     <Products data={product} key={product.id} />  
-
                   )
               })} 
         </Grid>

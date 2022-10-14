@@ -7,11 +7,10 @@ import Typography from '@mui/material/Typography';
 import Badge from '@mui/material/Badge';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
+import { useSelector } from 'react-redux/es/exports'
 
 const Header = () => {
-  let totalCart = localStorage.getItem("totalCart");
-
+ let totalCart = useSelector((state) => state.product.total)
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">

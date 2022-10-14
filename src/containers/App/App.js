@@ -20,7 +20,7 @@ const App = () => {
             <Header />
             <main>
                 {/* Container */}
-                <Container sx={{ py: 2 }} maxWidth="md">
+                <Container maxWidth="md">
                     <BrowserRouter>
                         <Routes>
                             <Route
