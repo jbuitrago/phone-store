@@ -6,7 +6,7 @@ import {
     SET_PRODUCT_ID,
     POST_PRODUCT_CART,
     POST_PRODUCT_CART_SUCCESS,
-} from '../constants/productConstant'
+} from "../constants/productConstant"
 
 const INITIAL_STATE = {
     count: 0,
@@ -36,7 +36,7 @@ const reducer = (state = INITIAL_STATE, action) => {
         case GET_PRODUCT_DETAIL:
             return {
                 ...state,
-                productId: action.payload
+                productId: action.payload,
             }
         case GET_PRODUCT_DETAIL_SUCCESS:
             return {
@@ -44,17 +44,19 @@ const reducer = (state = INITIAL_STATE, action) => {
                 productDetail: action.payload,
             }
         case POST_PRODUCT_CART:
-            console.log("POST_PRODUCT_CART:***");
-            console.log(action.payload);
+            console.log("POST_PRODUCT_CART:***")
+            console.log(action.payload)
             return {
                 ...state,
-                productCart: action.payload
+                productCart: action.payload,
             }
         case POST_PRODUCT_CART_SUCCESS:
+            console.log("POST_PRODUCT_CART_SUCCESS:***")
+
             return {
                 ...state,
                 productDetail: action.payload,
-                total: localStorage.getItem("totalCart")
+                total: localStorage.getItem("totalCart"),
             }
         default:
             return state

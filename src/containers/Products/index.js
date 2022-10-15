@@ -1,31 +1,31 @@
-import * as React from 'react'
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import Typography from '@mui/material/Typography'
-import { Button, CardActionArea, CardActions } from '@mui/material'
-import Grid from '@mui/material/Grid'
-import ROUTES from '../../utils/routes'
-import { Link } from 'react-router-dom'
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { Button, CardActionArea, CardActions } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import ROUTES from "../../utils/routes";
+import { Link } from "react-router-dom";
 
 // eslint-disable-next-line no-unused-vars
 const Product = ({ data }) => {
     // eslint-disable-next-line no-unused-vars
-    const { id, brand, imgUrl, model, price } = data
+    const { id, brand, imgUrl, model, price } = data;
 
     return (
         <Grid item key={id} xs={12} sm={6} md={3}>
-            <Card>
+            <Card >
                 <CardActionArea>
                     <CardMedia component="img" image={imgUrl} alt={model} />
                     <CardContent>
-                        <Typography gutterBottom component="div">
+                        <Typography variant="body2" color="text.secondary">
                             {model}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
                             {brand}
                         </Typography>
-                        <Typography variant="h5" color="text.secondary">
+                        <Typography variant="body2" color="text.secondary">
                             $ {price}
                         </Typography>
                     </CardContent>
@@ -40,7 +40,7 @@ const Product = ({ data }) => {
                 </CardActions>
             </Card>
         </Grid>
-    )
-}
+    );
+};
 
-export default Product
+export default Product;

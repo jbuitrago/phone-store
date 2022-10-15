@@ -1,18 +1,18 @@
-import React from 'react'
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
+import React from "react";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 
 const Copyright = () => {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-    {'Copyright © '}
-    <Link color="inherit" href="https://mui.com/">
-      Your Website
-    </Link>{' '}
-    {new Date().getFullYear()}
-    {'.'}
-  </Typography>
-  )
-}
+    return (
+        <Typography variant="body2" color="text.secondary" align="center">
+            {"Copyright © "}
+            <Link color="inherit" href="https://mui.com/">
+                {}
+            </Link>{" "}
+            {new Date().getFullYear()}
+            {"."}
+        </Typography>
+    );
+};
 
-export default Copyright
+export default Copyright;

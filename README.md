@@ -76,14 +76,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 npx create-react-app .
 
-## Install Eslint
-
-https://medium.com/@khriztianmoreno/configuraci%C3%B3n-de-eslint-usando-la-gu%C3%ADa-de-estilo-react-jsx-de-airbnb-c07ce3dcb072
-
-## Install Prettier
-
-https://prettier.io/docs/en/install.html
-
 ## Project Structure
 
 ```sh
@@ -107,3 +99,7 @@ https://prettier.io/docs/en/install.html
 ## Install Material UI
 
 https://mui.com/material-ui/getting-started/installation/
+
+## Re-install eslint and prettier 
+
+https://dev.to/knowankit/setup-eslint-and-prettier-in-react-app-357b
