@@ -68,3 +68,37 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Steps
+
+## Install boilerplate
+
+npx create-react-app .
+
+## Project Structure
+
+```sh
+├── src                         # Source code.
+    ├── components              # reusable UI components
+    ├── containers              # Page components/pages
+    ├── redux                   # Redux store
+        ├── actions             # All actions create here
+        ├── constants           # Redux constants
+        ├── reducers            # reducers to manage app's state
+        ├── store               # redux store configured
+    ├── sagas                   # App API calls/ asynchronous operations handle here
+        ├── api.js              # Axios baseUrl configured here
+        ├── index.js            # rootSaga
+        ├── sampleSaga.js       # Sample/demo saga file
+    ├── utils                   # conatins all utility files
+        ├── routes.js           # Application routes handle here
+├── index.js                    # React-redux and saga configured here
+```
+
+## Install Material UI
+
+https://mui.com/material-ui/getting-started/installation/
+
+## Re-install eslint and prettier
+
+https://dev.to/knowankit/setup-eslint-and-prettier-in-react-app-357b

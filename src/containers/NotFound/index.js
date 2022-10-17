@@ -1,17 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-//import "./index.scss"
-import ROUTES from '../../utils/routes'
+import React from 'react';
+import Grid from '@mui/material/Grid';
+import { Link } from 'react-router-dom';
+import ROUTES from '../../utils/routes';
 
 const NotFound = () => {
-  return (
-    <div className='not-found-page'>
-      <div>
-        <div>404: Page Not found</div><br/>
-        <Link to={ROUTES.HOME}>Back to home page</Link>
-      </div>
-    </div>
-  )
-}
+	return (
+		<Grid container sx={{ p: 2 }}>
+			Pagina no existe: <Link to={ROUTES.HOME}>Regresar a Home</Link>
+		</Grid>
+	);
+};
 
-export default NotFound
+export default NotFound;
