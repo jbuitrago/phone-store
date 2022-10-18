@@ -12,6 +12,7 @@ import {
 	setProductId,
 	getProductDetail,
 } from '../../redux/actions/productAction';
+import { setWithExpiry, getWithExpir } from '../../utils/cache';
 
 /**
  * Componente que consulta el detalle del producto,obtiene los datos de api con ayuda de la saga getProductDetail

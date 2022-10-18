@@ -11,7 +11,6 @@ import Home from '../Home';
 import About from '../About';
 import NotFound from '../NotFound';
 import ProductDetail from '../../components/Product/ProductDetail';
-import { setWithExpiry, getWithExpir } from '../../utils/cache';
 
 const theme = createTheme();
 

@@ -1,4 +1,9 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
+import {
+	setLocalStorageWithExpiry,
+	getLocalStorageWithExpiry,
+} from '../utils/cache';
+
 import API from './api';
 import {
 	GET_PRODUCTS_LIST,
@@ -49,8 +54,21 @@ const postProductCart = async data => {
  */
 function* getProductsListSaga(action) {
 	try {
-		const response = yield call(getProductsList, action.payload);
-		const { data, status } = response;
+		let data = {};
+		let status = 200;
+		const timeEspiry = 3600000; // 1 hora = 3600000 milisegundos
+		const key = 'productListSession';
+		if (getLocalStorageWithExpiry(key)) {
+			// Si la session productListSession Existe se asigna la session a data.
+			data = getLocalStorageWithExpiry(key);
+		} else {
+			// Si la session productListSession No existe se consulta el api y luego se crea la session productListSession
+			const response = yield call(getProductsList, action.payload);
+			data = response.data;
+			status = response.status;
+			setLocalStorageWithExpiry(key, data, timeEspiry);
+		}
+
 		if (status === 200) {
 			yield put(getProductsListSuccess(data));
 		} else {

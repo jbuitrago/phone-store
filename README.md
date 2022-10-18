@@ -89,7 +89,9 @@ Para este proyecto no se estan utilizando css , es un diseño sencillo y el proy
 
 ### Cache
 
-Se esta trabajando en este punto con localStorage
+Utilice el LocalStorage la cual es una parte de Web Storage API que permite la persistencia de datos.
+
+https://es.survivejs.com/react/implementing-kanban/implementing-persistency/
 
 ### Test
 
@@ -167,11 +169,13 @@ import Actions from '../Actions';
 
 ### Persistencia
 
-Estoy trabajando en la persistencia con localStorage
+Se crea el middleware cache para crear variables en localStorage con duracion de 1 hora (3600000 milisegundos), esto se hace directamente en la saga, se utiliza para guardar en session el listado de productos.
 
 ```javascript
-import
-
+import {
+	setLocalStorageWithExpiry,
+	getLocalStorageWithExpiry,
+} from '../utils/cache';
 ```
 
 ### Problemas encontrados
