@@ -178,9 +178,9 @@ import {
 } from '../utils/cache';
 ```
 
-### Problemas encontrados
+## Problemas encontrados
 
-## Añadir producto a la cesta
+### Añadir producto a la cesta
 
 El /api/cart siempre me devuelve siempre {"count":1}
 
